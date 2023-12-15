@@ -34,7 +34,9 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 
 # Allowed Host(s)
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'https://churchrest-production.up.railway.app'
+    ]
 
 
 # Application definition
