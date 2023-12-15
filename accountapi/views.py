@@ -7,6 +7,7 @@ from rest_framework.authtoken.models import Token
 from accountapi.models import User
 from rest_framework.views import APIView
 from django.contrib.auth import logout
+from rest_framework.generics import GenericAPIView
 
 
 from accountapi.serializers import UserSerializer
@@ -39,12 +40,13 @@ class UserLogoutView(APIView):
 
 userlogoutView = UserLogoutView.as_view()
 
-class UserSignupView(APIView):
+class UserSignupView(GenericAPIView):
     permission_classes = [AllowAny]
+    serializer_class = UserSerializer
 
     def post(self, request, *args, **kwargs):
-        serializer = UserSerializer(data=request.data)
-        if serializer.is_valid():
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid(raise_exception=True):
             user_instance = serializer.save()
             user_instance.set_password(request.data['password'])
             user_instance.is_active = True
