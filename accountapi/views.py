@@ -13,7 +13,6 @@ from accountapi.serializers import UserSerializer
 
 
 class UserLoginView(APIView):
-    permission_classes = [AllowAny]
 
     def post(self, request, *args, **kwargs):
         user = get_object_or_404(User, username=request.data['username'])
