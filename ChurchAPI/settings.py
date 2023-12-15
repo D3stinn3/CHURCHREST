@@ -35,7 +35,8 @@ DEBUG = env('DEBUG')
 
 # Allowed Host(s)
 ALLOWED_HOSTS = [
-    'https://churchrest-production.up.railway.app'
+    'https://churchrest-production.up.railway.app',
+    'churchrest-production.up.railway.app'
     ]
 
 
