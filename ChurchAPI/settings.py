@@ -35,7 +35,6 @@ DEBUG = env('DEBUG')
 
 # Allowed Host(s)
 ALLOWED_HOSTS = [
-    'https://churchrest-production.up.railway.app',
     'churchrest-production.up.railway.app'
     ]
 
@@ -154,7 +153,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS Security
 CORS_ALLOWED_ORIGINS = [
-    'https://churchrest-production.up.railway.app',
     'churchrest-production.up.railway.app'
 ]
 
