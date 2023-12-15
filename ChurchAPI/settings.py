@@ -159,9 +159,3 @@ CSRF_TRUSTED_ORIGINS = [
     'https://churchrest-production.up.railway.app'
 ]
 
-# Rest Framework Authentication Settings
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
-    ]
-}
