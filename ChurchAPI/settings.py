@@ -150,7 +150,14 @@ MEDIA_ROOT = BASE_DIR.parent / "static" / "media"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS Security
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = [
+    'http://churchrest-production.up.railway.app'
+]
+
+# CSRF Trusted Origins
+CSRF_TRUSTED_ORIGINS = [
+    'http://churchrest-production.up.railway.app'
+]
 
 # Rest Framework Authentication Settings
 REST_FRAMEWORK = {
