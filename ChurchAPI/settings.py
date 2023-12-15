@@ -159,6 +159,6 @@ CORS_ALLOWED_ORIGINS = [
 
 # CSRF Trusted Origins
 CSRF_TRUSTED_ORIGINS = [
-    'churchrest-production.up.railway.app'
+    'https://churchrest-production.up.railway.app'
 ]
 
