@@ -151,12 +151,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS Security
 CORS_ALLOWED_ORIGINS = [
-    'http://churchrest-production.up.railway.app'
+    'https://churchrest-production.up.railway.app'
 ]
 
 # CSRF Trusted Origins
 CSRF_TRUSTED_ORIGINS = [
-    'http://churchrest-production.up.railway.app'
+    'https://churchrest-production.up.railway.app'
 ]
 
 # Rest Framework Authentication Settings
