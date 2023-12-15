@@ -31,7 +31,7 @@ class UserLoginView(GenericAPIView):
     
 userloginView = UserLoginView.as_view()
 
-class UserLogoutView(APIView):
+class UserLogoutView(GenericAPIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
