@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from eventapi.models import Event
-
+from accountapi.managers import CustomUserManager
 roleChoices = [
     ("ADMIN", "Admin"),
     ("USER","User")
@@ -11,6 +10,8 @@ roleChoices = [
 class User(AbstractUser):
     email = models.EmailField(unique=True, null=True)
     role = models.CharField(max_length=255, choices=roleChoices, default="USER")
+    
+    objects = CustomUserManager()
     
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
