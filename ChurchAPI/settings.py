@@ -150,7 +150,7 @@ MEDIA_ROOT = BASE_DIR.parent / "static" / "media"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS Security
-CORS_ALLOW_ALL_ORIGINS = [
+CORS_ALLOWED_ORIGINS = [
     'http://churchrest-production.up.railway.app'
 ]
 
