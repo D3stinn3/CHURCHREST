@@ -7,7 +7,7 @@ from rest_framework.authtoken.models import Token
 from accountapi.models import User
 from rest_framework.views import APIView
 from django.contrib.auth import logout
-from rest_framework.generics import GenericAPIView
+from rest_framework.generics import GenericAPIView, RetrieveAPIView, ListAPIView
 
 
 from accountapi.serializers import UserSerializer
@@ -63,3 +63,17 @@ class UserSignupView(GenericAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
 usersignupView = UserSignupView.as_view()
+
+class UserDetailView(RetrieveAPIView):
+    permission_classes = [AllowAny]
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+userdetailView = UserDetailView.as_view()
+
+class UserListView(ListAPIView):
+    permission_classes = [AllowAny]
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    
+userlistView = UserListView.as_view()
